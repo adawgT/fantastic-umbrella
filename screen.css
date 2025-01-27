@@ -2,3 +2,10 @@
 a.active {
     font-weight: bold;
 }
+
+#waveform ::part(cursor):before {
+    content: '🏄';
+  }
+  #waveform ::part(region) {
+    font-family: fantasy;
+  }
