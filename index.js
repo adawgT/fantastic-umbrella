@@ -1,13 +1,15 @@
 // Add JavaScript below
-import WaveSurfer from 'wavesurfer.js'
-
-<script src="https://unpkg.com/wavesurfer.js@7"></script>
+<script type="module">
+import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
 
 const wavesurfer = WaveSurfer.create({
-    container: '#waveform',
-    waveColor: '#4F4A85',
-    progressColor: '#383351',
-    url: '/audio.mp3',
-  })
+  container: '#waveform',
+  waveColor: '#4F4A85',
+  progressColor: '#383351',
+  url: 'audios/rain.mp3',
+})
 
-  <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+wavesurfer.on('interaction', () => {
+  wavesurfer.play()
+})
+</script>
